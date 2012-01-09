@@ -13,5 +13,9 @@
       %textarea{:name=>"message"}
       %br
       %input{:type=>"submit"}
+    - @messages.each do |item|
+      .item
+        %h2= item.name
+        %p= item.message
 
 
