@@ -5,5 +5,13 @@
   %head
     %title test
   %body
-    %h1 test contents
+    %h1 Hello, World
     %p Hello, World
+    %form{:action=>"/", :method=>"POST"}
+      %input{:type=>"textfield", :name=>"name"}
+      %br
+      %textarea{:name=>"message"}
+      %br
+      %input{:type=>"submit"}
+
+
