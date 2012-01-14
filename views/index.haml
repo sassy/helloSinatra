@@ -4,18 +4,19 @@
 %html
   %head
     %title test
+    %link{:rel=>"stylesheet", :href=>"http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"}
   %body
-    %h1 Hello, World
-    %p Hello, World
-    %form{:action=>"/", :method=>"POST"}
-      %input{:type=>"textfield", :name=>"name"}
-      %br
-      %textarea{:name=>"message"}
-      %br
-      %input{:type=>"submit"}
-    - @messages.each do |item|
-      .item
-        %h2= item.name
-        %p= item.message
-
-
+    .container
+      %h1 Hello, World
+      %p Hello, World
+      %form{:action=>"/", :method=>"POST"}
+        %input{:type=>"textfield", :name=>"name"}
+        %br
+        %textarea{:name=>"message"}
+        %br
+        %input{:type=>"submit"}
+      .row
+        - @messages.each do |item|
+          .span12
+            %h2= item.name
+            %p= item.message
