@@ -1,0 +1,15 @@
+!!! XML
+!!! Strict
+
+%html
+  %head
+    %title test
+    %link{:rel=>"stylesheet", :href=>"http://twitter.github.com/bootstrap/1.4.0/bootstrap.min.css"}
+  %body
+    .container
+      %form{:action=>"login", :method=>"POST"}
+        %input{:type=>"text", :name=>"user"}
+        %br
+        %input{:type=>"password", :name=>"password"}
+        %br
+        %input{:type=>"submit"}

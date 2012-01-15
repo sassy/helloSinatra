@@ -2,10 +2,13 @@ require 'rubygems'
 require 'sinatra'
 require 'haml'
 require './model/message.rb'
+require './helpers/auth.rb'
 
 get '/' do
-  @messages = Message.order_by(:posted_date.desc)
-  haml :index
+  need_auth do
+    @messages = Message.order_by(:posted_date.desc)
+    haml :index
+  end
 end
 
 post '/' do
@@ -16,3 +19,16 @@ post '/' do
   })
   redirect '/'
 end
+
+get '/login' do
+  haml :login
+end
+
+post '/login' do
+  login
+end
+
+get '/logout' do
+  haml :logout
+end
+
