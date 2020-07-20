@@ -6,7 +6,7 @@ require './helpers/auth.rb'
 
 get '/' do
   need_auth do
-    @messages = Message.order_by(:posted_date.desc)
+    @messages = Message.order_by(:posted_date)
     haml :index
   end
 end
