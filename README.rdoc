@@ -1,2 +1,6 @@
 = Sinatraアプリ
 Sinatraでアプリを作ってみるテスト
+
+  $ docker-compose up -d
+
+http://localhost:5000 でBrowserでアクセス
