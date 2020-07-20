@@ -4,8 +4,8 @@ GEM
     haml (5.0.0)
       temple (>= 0.8.0)
       tilt
-    rack (1.4.0)
-    rack-protection (1.2.0)
+    rack (1.6.13)
+    rack-protection (1.5.5)
       rack
     sequel (3.31.0)
     sinatra (1.3.2)
